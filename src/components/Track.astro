@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+const { musica, autor, numero, imgLink } = Astro.props;
+---
+
+<li class="list-row">
+    <div class="text-3xl sm:text-4xl font-thin opacity-30 tabular-nums -rotate-90">{numero}</div>
+    <div>
+        <Image alt={musica} src={imgLink} class="size-10 rounded-box"/>
+    </div>
+    <div class="list-col-grow">
+        <div>{musica}</div>
+        <div class="text-xs uppercase font-semibold opacity-60">
+            {autor}
+        </div>
+    </div>
+    <button class="btn btn-square btn-ghost">
+        <Icon name="playButton" />
+    </button>
+</li>

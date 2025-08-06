@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import hero from "../assets/hero_item.jpg";
+---
+
+<section
+    class="flex justify-center items-center h-screen -mt-[20vh]"
+    id="hero"
+>
+    <div class="text-center">
+        <Image
+            src={hero}
+            alt="Paul Stenn"
+            class="w-full h-screen object-cover 2xl:h-auto 2xl:w-2/3 mx-auto mask-radial-at-center mask-radial-from-35% mask-radial-to-70% relative "
+        />
+        <span
+            class="font-semibold text-xl lg:text-2xl bg-gray-600/40 p-2 sm:p-3 md:p-4 rounded-2xl md:rounded-4xl absolute bottom-1/5 2xl:bottom-1/6 transform -translate-x-1/2 left-1/2 font-mono flex flex-nowrap gap-2"
+            >
+            <Icon name="verified" class="text-[#3992ff]"/>
+             @paulstenn
+            </span
+        >
+    </div>
+</section>

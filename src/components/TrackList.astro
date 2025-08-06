@@ -1,0 +1,29 @@
+---
+import Track from "./Track.astro";
+import cover1 from "../assets/dancing.jpg"
+import cover2 from "../assets/make_it.jpg"
+import cover3 from "../assets/night_circuit.jpg"
+import cover4 from "../assets/hero_item.jpg"
+import cover5 from "../assets/europeo.jpg"
+
+const tracks = [
+    { numero: "01", musica: "DANCING", autor: "Paul Stenn", imgLink: cover1 },
+    { numero: "02", musica: "Make it", autor: "Paul Stenn", imgLink: cover2 },
+    { numero: "03", musica: "Night Circuit", autor: "Paul Stenn", imgLink: cover3 },
+    { numero: "04", musica: "COMO TE LLAMAS", autor: "Paul Stenn", imgLink: cover4 },
+    { numero: "05", musica: "Europeo", autor: "Paul Stenn", imgLink: cover5 }
+];
+---
+
+<section class="h-[auto] flex flex-col items-center">
+    <div class="text-left">
+        <h1 class="text-satoshi font-light text-left text-2xl text-">Tracks</h1>
+    </div>
+    <ul class="list bg-base-100 rounded-box shadow-md w-3/4  mx-auto">
+        <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">
+            Most played songs this week
+        </li>
+        {tracks.map((t) => <Track {...t} />)}
+    </ul>
+</section>
+
