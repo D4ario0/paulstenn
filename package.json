@@ -2,6 +2,7 @@
   "name": "paulstenn",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@10.9.0",
   "scripts": {
     "dev": "astro dev & chromium-browser http://localhost:4321 2> /dev/null",
     "build": "astro build",
