@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      sharp:
-        specifier: ^0.34.3
-        version: 0.34.3
     devDependencies:
       '@tailwindcss/typography':
         specifier: ^0.5.16
@@ -27,6 +23,9 @@ importers:
       daisyui:
         specifier: ^5.0.50
         version: 5.0.50
+      sharp:
+        specifier: ^0.34.3
+        version: 0.34.3
       tailwindcss:
         specifier: ^4.1.11
         version: 4.1.11
