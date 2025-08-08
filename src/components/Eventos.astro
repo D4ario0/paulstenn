@@ -1,16 +1,29 @@
 ---
+const eventos = [
+    {
+        titulo: "F4BRIX & Friends",
+        ref: "https://www.macanchis.ec/event/soloparareales-1/register",
+        fecha: "15 de agosto",
+        establecimiento: "macanchis.ec",
+        hora: "17h00",
+        lugar: "Guayaquil | Ecuador",
+    },
+];
+import CartaEvento from "./CartaEvento.astro";
 ---
 
-<section class="h-auto flex flex-col items-center w-full gap-6 " id="tracks">
+<section
+    class="h-auto flex flex-col items-center w-full gap-6 mt-[10%] md:mt-[5%]"
+    id="eventos"
+>
     <div class="w-3/4">
-        <h1 class="text-satoshi font-light tracking-wider text-left text-2xl text-gray-400">
-          Eventos
+        <h1
+            class="text-satoshi font-light tracking-wider text-left text-3xl text-gray-400"
+        >
+            Eventos
         </h1>
     </div>
-    <ul class="list bg-base-100 rounded-box shadow-md w-3/4  mx-auto">
-        <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">
-            Most played songs this week
-        </li>
-    </ul>
+    <div class="w-3/4 px-2">
+        {eventos.map((t) => <CartaEvento {...t} />)}
+    </div>
 </section>
-

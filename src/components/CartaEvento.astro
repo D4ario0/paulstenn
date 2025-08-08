@@ -1,0 +1,72 @@
+---
+const { titulo, ref, establecimiento, fecha, hora, lugar } = Astro.props;
+---
+
+<div
+    class="relative flex flex-row bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg text-black shadow-2xl font-orbitron uppercase h-[50vh] sm:h-[30vh] overflow-hidden border border-gray-300"
+>
+    <!-- Background shapes -->
+    <div class="absolute inset-0 pointer-events-none">
+        <!-- Large radial glow -->
+        <div
+            class="absolute -top-20 -left-20 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl"
+        >
+        </div>
+        <div
+            class="absolute top-10 -right-24 w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl"
+        >
+        </div>
+        <!-- Subtle angled stripes -->
+        <div
+            class="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.05)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.05)_50%,rgba(255,255,255,0.05)_75%,transparent_75%,transparent)] bg-[length:20px_20px]"
+        >
+        </div>
+    </div>
+
+    <!-- Left content -->
+    <div class="relative z-10 p-6 flex-1 flex flex-col justify-between">
+        <!-- Event Title -->
+        <h2
+            class="text-xl sm:text-2xl md:text-3xl tracking-widest font-bold text-gray-900 drop-shadow-md"
+        >
+            {titulo}
+        </h2>
+
+        <!-- Event details -->
+        <div>
+            <p class="tracking-wide text-sm sm:text-base text-gray-700">
+                Consigue tu ticket en:
+                <a
+                    class="underline text-indigo-600 hover:text-indigo-800"
+                    href={ref}
+                    target="_blank"
+                >
+                    {establecimiento}
+                </a>
+            </p>
+            <p class="mt-2 text-xs sm:text-sm text-gray-500 tracking-wide">
+                🎧 DJ Set en vivo · Música electrónica toda la noche
+            </p>
+        </div>
+    </div>
+
+    <!-- Right bar -->
+    <div
+        class="relative z-10 w-12 sm:w-14 bg-gradient-to-b from-black via-gray-800 to-black text-white flex flex-col justify-between items-center p-2 overflow-hidden border-l-4 border-dashed border-white shadow-[0_0_10px_#00ffcc]"
+    >
+        <!-- Date -->
+        <div class="flex justify-center items-center h-full overflow-hidden">
+            <span
+                class="rotate-90 origin-center whitespace-nowrap tracking-widest text-lg sm:text-xl font-bold drop-shadow-lg"
+            >
+                {fecha}
+            </span>
+        </div>
+        <!-- Time -->
+        <span
+            class="text-xs sm:text-sm font-semibold tracking-wide drop-shadow-lg"
+        >
+            {hora}
+        </span>
+    </div>
+</div>

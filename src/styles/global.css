@@ -2,64 +2,73 @@
 @plugin "@tailwindcss/typography";
 @plugin "daisyui";
 @plugin "daisyui/theme" {
-  name: "stenn";
-  default: true;
-  prefersdark: true;
-  color-scheme: dark;
-  --color-accent: "#ff8904";
+    name: "stenn";
+    default: true;
+    prefersdark: true;
+    color-scheme: dark;
+    --color-accent: "#ff8904";
 }
 
 @theme {
-  --font-satoshi: "Satoshi";
+    --font-satoshi: "Satoshi";
+    --font-orbitron: "Orbitron";
 }
 
 @font-face {
-  font-family: "Satoshi";
-  src: url("/fonts/Satoshi.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url("/fonts/Orbitron.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 strong {
-  color: #ff8904;
+    color: #ff8904;
 }
 
 hr {
-  background-color: #ff8904;
-  height: 2px;
+    background-color: #ff8904;
+    height: 2px;
 }
 
 .gradient-blue-red {
-  @apply bg-radial-[at_220%_400%] from-indigo-950 via-gray-800 to-red-900
+    @apply bg-radial-[at_220%_400%] from-indigo-950 via-gray-800 to-red-900
     via-78% to-105%;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .fade-in-slow {
-  animation: fadeIn 0.5s ease-out;
-  animation-delay: 0.7s;
-  opacity: 0;
-  animation-fill-mode: forwards;
+    animation: fadeIn 0.5s ease-out;
+    animation-delay: 0.7s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 .fade-in-medium {
-  animation: fadeIn 0.7s ease-out;
-  animation-delay: 0.5s;
-  opacity: 0;
-  animation-fill-mode: forwards;
+    animation: fadeIn 0.7s ease-out;
+    animation-delay: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 .fade-in-fast {
-  animation: fadeIn 0.7s ease-out;
-  opacity: 0;
-  animation-fill-mode: forwards;
+    animation: fadeIn 0.7s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
